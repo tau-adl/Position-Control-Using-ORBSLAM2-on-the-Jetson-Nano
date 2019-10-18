@@ -23,26 +23,7 @@ export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/your_comp/ORB_SLAM2_CUDA/Examp
 Add a yaml configuration file from EUROC under:
 ~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/conf
 
-Change the ros_mono.launch file to:
-    <?xml version="1.0"?>
-<launch>
-
-	<?xml version="1.0"?>
-<launch>
-	<arg name="vocabularty_path" default="$(find ORB_SLAM2_CUDA)/../../../Vocabulary/ORBvoc.txt"/>
-    <!--arg name="vocabularty_path" default="/run/user/1000/ORBvoc.txt" /-->
-    <arg name="camera_setting_path" default="$(find ORB_SLAM2_CUDA)/conf/euroc.yaml" />
-    <arg name="bUseViewer" default="false" />
-    <arg name="bEnablePublishROSTopic" default="true" />
-
-    <node name="ORB_SLAM2_CUDA" pkg="ORB_SLAM2_CUDA" type="Mono" output="screen" 
-	args="$(arg vocabularty_path) $(arg camera_setting_path) $(arg bUseViewer) $(arg bEnablePublishROSTopic)">
-        <remap from="/camera/image_raw" to="/cam0/image_raw"/>
-        <!--remap from="camera" to="/bebop/image_raw"/-->
-
-  	</node>
-    <!--node name="record" pkg="rosbag" type="record" args="-o /home/nano/ORB_SLAM2_CUDA/bag_rec/bag_rec /orb_slam2_pose"/-->
-</launch>
+Change the ros_mono.launch in the original repo to the file in this repo.
 
 type  the following commands in a terminal:
 
@@ -50,9 +31,22 @@ sudo jetson_clocks
 
 roslaunch ~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/ros_mono.launch bUseViewer:=true
 
-rosbag play  bag file
+rosbag play  bag file    (the bagfile is from EUROC)
 
 ## Running OrbSLAM2 on the Bebop2 camera:
+* create a ROS worksapce, bebop_ws, in your home folder according to https://bebop-autonomy.readthedocs.io/en/latest/installation.htm
+
+    1. sudo jetson_clocks
+    2. connect to bebop wifi
+    3. roslaunch ~/bebop_ws/src/bebop_autonomy/bebop_driver/launch/bebop_node.launch
+    4. roslaunch ~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/bebop_ros_mono.launch bUseViewer:=true
+(now lock slam manually with drone)
+    5. roslaunch ~/bebop_ws/src/drone_control_fb_slam/launch/drone_bebop_control.launch
+    6. rostopic pub --once /bebop/state_change std_msgs/Bool "data: true"
+    7. rostopic pub --once /bebop/path_change std_msgs/Bool "data: true"
+    8. rostopic pub --once /bebop/land std_msgs/Empty
+
+
 
 
 
