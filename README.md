@@ -31,7 +31,7 @@ Then, type  the following commands in a terminal:
 2. roslaunch ~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/ros_mono.launch bUseViewer:=true
 3. rosbag play  bag file    (the bagfile is from EUROC)
 
-## Running OrbSLAM2 on the Bebop2 camera:
+## Running OrbSLAM2 on with the Bebop2 camera's video feed:
 * create a ROS worksapce, bebop_ws, in your home folder according to https://bebop-autonomy.readthedocs.io/en/latest/installation.html
 
 Copy the bebop.yaml file from this repo to:
@@ -48,6 +48,19 @@ Then, type  the following commands in a terminal:
 4. roslaunch ~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/bebop_ros_mono.launch bUseViewer:=true
 (now, check the slam manually by moving drone around in your hand)
     
+
+## Close loop control for hovering using the OrbSLAM2:
+Add the following ros package to the src directory of bebop_ws, and build.
+
+
+
+From now on please be very cautious
+
+1. In a terminal type: roslaunch ~/bebop_ws/src/drone_control_fb_slam/launch/drone_bebop_control.launch
+this will make the drone hover in one place using it's own OF and height sensors
+2. In a terminal type: rostopic pub --once /bebop/state_change std_msgs/Bool "data: true"
+this will make the drone hover in one place using the SLAM's pose
+3. To land the drone, 	rostopic pub --once /bebop/land std_msgs/Empty
 
 
 
