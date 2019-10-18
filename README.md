@@ -35,10 +35,11 @@ Then, type  the following commands in a terminal:
 * create a ROS worksapce, bebop_ws, in your home folder according to https://bebop-autonomy.readthedocs.io/en/latest/installation.html
 
 Then, type  the following commands in a terminal:
-    1. sudo jetson_clocks
-    2. connect to bebop wifi
-    3. roslaunch ~/bebop_ws/src/bebop_autonomy/bebop_driver/launch/bebop_node.launch
-    4. roslaunch ~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/bebop_ros_mono.launch bUseViewer:=true
+
+1. sudo jetson_clocks
+2. connect to bebop wifi
+3. roslaunch ~/bebop_ws/src/bebop_autonomy/bebop_driver/launch/bebop_node.launch
+4. roslaunch ~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/bebop_ros_mono.launch bUseViewer:=true
 (now, check the slam manually by moving drone around in your hand)
     
 
