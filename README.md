@@ -40,11 +40,8 @@ rosbag play  bag file    (the bagfile is from EUROC)
     2. connect to bebop wifi
     3. roslaunch ~/bebop_ws/src/bebop_autonomy/bebop_driver/launch/bebop_node.launch
     4. roslaunch ~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/bebop_ros_mono.launch bUseViewer:=true
-(now lock slam manually with drone)
-    5. roslaunch ~/bebop_ws/src/drone_control_fb_slam/launch/drone_bebop_control.launch
-    6. rostopic pub --once /bebop/state_change std_msgs/Bool "data: true"
-    7. rostopic pub --once /bebop/path_change std_msgs/Bool "data: true"
-    8. rostopic pub --once /bebop/land std_msgs/Empty
+(now, check the slam manually by moving drone around in your hand)
+    
 
 
 
