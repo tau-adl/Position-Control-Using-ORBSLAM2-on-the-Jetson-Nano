@@ -19,7 +19,8 @@ The first part of the repo is based on the work of Thien Nguyen (hoangthien94)
 
 ## Running OrbSLAM2 on the EUROC dataset:
 
-Add a yaml configuration file from EUROC under:
+Add the euroc.yaml configuration file from the EUROC dataset to:
+
 ~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/conf
 
 Change the ros_mono.launch in the original repo to the file in this repo.
@@ -33,7 +34,9 @@ Then, type  the following commands in a terminal:
 ## Running OrbSLAM2 on the Bebop2 camera:
 * create a ROS worksapce, bebop_ws, in your home folder according to https://bebop-autonomy.readthedocs.io/en/latest/installation.html
 
-Copy the bebop.yaml file from this repo to ~/ORB_SLAM2_CUDA
+Copy the bebop.yaml file from this repo to:
+
+~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/conf
 
 Change the bebop_ros_mono.launch in the original repo to the file in this repo.
 
