@@ -27,11 +27,9 @@ Change the ros_mono.launch in the original repo to the file in this repo.
 
 type  the following commands in a terminal:
 
-sudo jetson_clocks
-
-roslaunch ~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/ros_mono.launch bUseViewer:=true
-
-rosbag play  bag file    (the bagfile is from EUROC)
+1. sudo jetson_clocks
+2. roslaunch ~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/ros_mono.launch bUseViewer:=true
+3. rosbag play  bag file    (the bagfile is from EUROC)
 
 ## Running OrbSLAM2 on the Bebop2 camera:
 * create a ROS worksapce, bebop_ws, in your home folder according to https://bebop-autonomy.readthedocs.io/en/latest/installation.htm
