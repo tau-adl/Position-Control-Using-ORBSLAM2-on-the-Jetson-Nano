@@ -1,4 +1,4 @@
-# ORBSLAM2-for-Jetson-Nano2
+# Autonomous drone using ORBSLAM2 on the Jetson Nano
 Run ORBSLAM2 on the Jetson Nano, using recorded rosbags (e.g., EUROC) or live footage from a Bebop2 Drone.
 Tested with Monocular camera in real time.
 
@@ -25,15 +25,16 @@ Add a yaml configuration file from EUROC under:
 
 Change the ros_mono.launch in the original repo to the file in this repo.
 
-type  the following commands in a terminal:
+Then, type  the following commands in a terminal:
 
 1. sudo jetson_clocks
 2. roslaunch ~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/ros_mono.launch bUseViewer:=true
 3. rosbag play  bag file    (the bagfile is from EUROC)
 
 ## Running OrbSLAM2 on the Bebop2 camera:
-* create a ROS worksapce, bebop_ws, in your home folder according to https://bebop-autonomy.readthedocs.io/en/latest/installation.htm
+* create a ROS worksapce, bebop_ws, in your home folder according to https://bebop-autonomy.readthedocs.io/en/latest/installation.html
 
+Then, type  the following commands in a terminal:
     1. sudo jetson_clocks
     2. connect to bebop wifi
     3. roslaunch ~/bebop_ws/src/bebop_autonomy/bebop_driver/launch/bebop_node.launch
