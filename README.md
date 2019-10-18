@@ -11,7 +11,7 @@ The first part of the repo is based on the work of Thien Nguyen (hoangthien94)
 
 * Jetson Nano installation -   https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit
 * Install ROS Melodic 
-* After installing ROS Melodic, follow this thread https://github.com/hoangthien94/ORB_SLAM2_CUDA/issues/11#issuecomment-541394341 and install the ORB_SLAM2_CUDA repo in your home folder
+* After installing ROS Melodic, follow this thread and install the ORB_SLAM2_CUDA repo in your home folder https://github.com/hoangthien94/ORB_SLAM2_CUDA/issues/11#issuecomment-541394341 
 * Don't forget to add the following to your .bashrc:
 
 1. source /opt/ros/melodic/setup.bash
