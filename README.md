@@ -11,12 +11,11 @@ The first part of the repo is based on the work of Thien Nguyen (hoangthien94)
 
 * Jetson Nano installation -   https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit
 * Install ROS Melodic 
-* After installing ROS Melodic, follow this thread https://github.com/hoangthien94/ORB_SLAM2_CUDA/issues/11#issuecomment-541394341
+* After installing ROS Melodic, follow this thread https://github.com/hoangthien94/ORB_SLAM2_CUDA/issues/11#issuecomment-541394341 and install the ORB_SLAM2_CUDA repo in your home folder
 * Don't forget to add the following to your .bashrc:
 
-source /opt/ros/melodic/setup.bash
-
-export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/your_comp/ORB_SLAM2_CUDA/Examples/ROS
+1. source /opt/ros/melodic/setup.bash
+2. export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/your_comp/ORB_SLAM2_CUDA/Examples/ROS
 
 ## Running OrbSLAM2 on the EUROC dataset:
 
@@ -36,7 +35,7 @@ Then, type  the following commands in a terminal:
 
 Copy the bebop.yaml file from this repo to ~/ORB_SLAM2_CUDA
 
-Change the ros_mono.launch in the original repo to the file in this repo.
+Change the bebop_ros_mono.launch in the original repo to the file in this repo.
 
 Then, type  the following commands in a terminal:
 
