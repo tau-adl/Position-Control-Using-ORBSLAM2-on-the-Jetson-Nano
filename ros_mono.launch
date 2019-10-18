@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+	<arg name="vocabularty_path" default="$(find ORB_SLAM2_CUDA)/../../../Vocabulary/ORBvoc.txt"/>
+    <!--arg name="vocabularty_path" default="/run/user/1000/ORBvoc.txt" /-->
+    <arg name="camera_setting_path" default="$(find ORB_SLAM2_CUDA)/conf/euroc.yaml" />
+    <arg name="bUseViewer" default="false" />
+    <arg name="bEnablePublishROSTopic" default="true" />
+
+    <node name="ORB_SLAM2_CUDA" pkg="ORB_SLAM2_CUDA" type="Mono" output="screen" 
+	    args="$(arg vocabularty_path) $(arg camera_setting_path) $(arg bUseViewer) $(arg bEnablePublishROSTopic)">
+        <remap from="camera" to="/cam0/image_raw"/>
+        <!--remap from="camera" to="/bebop/image_raw"/-->
+
+  	</node>
+    <!--node name="record" pkg="rosbag" type="record" args="-o /home/nano/ORB_SLAM2_CUDA/bag_rec/bag_rec /orb_slam2_pose"/-->
+</launch>
