@@ -49,7 +49,7 @@ Then, type  the following commands in a terminal:
 (now, check the slam manually by moving drone around in your hand)
     
 
-## Close loop control for hovering using the OrbSLAM2:
+## Close loop position control using the OrbSLAM2's pose as feedback:
 Add the following ros package to the src directory of bebop_ws, and build.
 
 
