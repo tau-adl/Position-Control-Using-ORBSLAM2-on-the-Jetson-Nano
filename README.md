@@ -34,6 +34,10 @@ Then, type  the following commands in a terminal:
 ## Running OrbSLAM2 on the Bebop2 camera:
 * create a ROS worksapce, bebop_ws, in your home folder according to https://bebop-autonomy.readthedocs.io/en/latest/installation.html
 
+Copy the bebop.yaml file from this repo to ~/ORB_SLAM2_CUDA
+
+Change the ros_mono.launch in the original repo to the file in this repo.
+
 Then, type  the following commands in a terminal:
 
 1. sudo jetson_clocks
