@@ -31,7 +31,7 @@ Then, type  the following commands in a terminal:
 2. roslaunch ~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/ros_mono.launch bUseViewer:=true
 3. rosbag play  bag file    (the bagfile is from EUROC)
 
-## Running OrbSLAM2 on with the Bebop2 camera's video feed:
+## Running OrbSLAM2 with the Bebop2 camera's video feed:
 * create a ROS worksapce, bebop_ws, in your home folder according to https://bebop-autonomy.readthedocs.io/en/latest/installation.html
 
 Copy the bebop.yaml file from this repo to:
