@@ -50,7 +50,7 @@ Then, type  the following commands in a terminal:
     
 
 ## Close loop position control using the OrbSLAM2's pose as feedback:
-Add the drone_control ros package from this repo (TBD soon) to the src directory of bebop_ws, and build.
+Add the drone_control ros package from this repo to the src directory of bebop_ws, and build.
 
 From now on please be very cautious
 
