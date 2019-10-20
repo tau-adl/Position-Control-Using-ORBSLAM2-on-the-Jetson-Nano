@@ -1,0 +1,12 @@
+<launch>
+	<node pkg="drone_control_fb_slam" name="drone_bebop_control_" type="drone_control_fb_slam_node" output="screen">
+        	<remap from="pose_SLAM_topic" to="/bebop/orb_slam2_pose"/>
+        	<remap from="path_change" to="/bebop/path_change"/>
+        	<remap from="state_change" to="/bebop/state_change"/>
+        	<remap from="velocity" to="/bebop/cmd_vel/"/>
+        	<param name="scale_true" value="2"/>
+        	<!--<param name="alpha_velocity" value=".4"/>-->
+        	<!--<param name="max_forward_index" value="0.4"/>-->
+        	<!--<param name="critical_prob" value="0.9"/>-->
+	</node>
+</launch>
