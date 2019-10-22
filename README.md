@@ -33,6 +33,10 @@ Then, type  the following commands in a terminal:
 
 ## Running OrbSLAM2 with the Bebop2 camera's video feed:
 * create a ROS worksapce, bebop_ws, in your home folder according to https://bebop-autonomy.readthedocs.io/en/latest/installation.html
+* git clone https://github.com/AutonomyLab/parrot_arsdk.git   (to src of bebop_ws)
+* sudo snap install avahi
+* sudo apt-get install libavahi-client-dev
+* catkin build
 
 Copy the bebop.yaml file from this repo to:
 
