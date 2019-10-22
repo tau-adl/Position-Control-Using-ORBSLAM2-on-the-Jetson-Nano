@@ -38,6 +38,8 @@ Then, type  the following commands in a terminal:
 * sudo apt-get install libavahi-client-dev
 * catkin build
 
+(See this link for additional help: https://forum.developer.parrot.com/t/sdk3-build-error/3274/3 )
+
 Copy the bebop.yaml file from this repo to:
 
 ~/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/conf
